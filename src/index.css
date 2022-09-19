@@ -5,9 +5,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 900px;
+}
+.user-info {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr 1fr;
+}
+
+.user {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin: 0 0 10px;
+}
+
+.user-info.fixed {
+  box-shadow: 5px 5px 10px #aaa;
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  position: sticky;
+  top: 10px;
+  background-color: #fff;
+  margin: 0 0 20px;
+  z-index: 200;
+}
+
+.user-more > strong {
+  display: inline-block;
+  margin-top: 10px;
+  position: relative;
+
+  padding: 0 20px 0 0;
+}
+
+.user-more > strong:hover {
+  cursor: pointer;
+}
+
+.user-more > strong:before {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  content: "";
+  border: 1px solid #aaa;
+  border-width:  1px 1px 0 0;
+  width: 5px;
+  height: 5px;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.statement-row {
+  display: grid;
+  grid-template-columns: 100px auto;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 10px;
+}
+
+.statement-row-holder {
+  overflow: hidden;
+  height: 0;
+}
+
+.user-more.active .statement-row-holder{
+  height: auto;
 }
